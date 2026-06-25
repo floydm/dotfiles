@@ -80,7 +80,6 @@ alias flin="flatpak install"
 alias flun="flatpak uninstall"
 alias flup="flatpak update"
 
-
 # ==============================================================================
 # 5. THE PROMPT (The look and feel)
 # ==============================================================================
@@ -90,3 +89,5 @@ alias flup="flatpak update"
 PROMPT='%F{green}%~%f %F{242}(%D{%H:%M:%S})%f
 %F{cyan}➔%f '
 
+# Starship
+eval "$(starship init zsh)"
