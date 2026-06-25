@@ -1,0 +1,39 @@
+format = "$hostname$directory$git_branch$git_status$character"
+
+[hostname]
+ssh_only = false
+format = "[$hostname](bold cyan) "
+disabled = false
+
+[directory]
+format = "[$path](bold blue) "
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+format = "[$symbol$branch](bold purple) "
+symbol = " "
+
+[git_status]
+format = '([$all_status$ahead_behind](bold yellow) )'
+conflicted = "✖ "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕ "
+untracked = "? "
+modified = "! "
+staged = "+ "
+deleted = "✘ "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[python]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[rust]
+disabled = true
