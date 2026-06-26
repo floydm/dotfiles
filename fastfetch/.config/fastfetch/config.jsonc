@@ -1,0 +1,66 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "display": {
+    "key": {
+      "width": 10
+    },
+    "size": {
+      "binaryPrefix": "jedec"
+    },
+    "separator": ""
+  },
+  "logo": {
+    "type": "builtin",
+    "source": "opensuse"
+  },
+  "modules": [
+    "break",
+    {
+      "type": "kernel",
+      "key": " Kernel",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "packages",
+      "key": "󰏖 Apps",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "uptime",
+      "key": " Uptime",
+      "keyColor": "green"
+    },
+    {
+      "type": "cpu",
+      "key": " CPU",
+      "keyColor": "blue",
+      "format": "{name}"
+    },
+    {
+      "type": "gpu",
+      "key": "󰾲 GPU",
+      "keyColor": "red",
+      "format": "{name}"
+    },
+    {
+      "type": "memory",
+      "key": " RAM",
+      "keyColor": "yellow",
+      "format": "{used} / {total}"
+    },
+    {
+      "type": "disk",
+      "key": " Disk",
+      "keyColor": "cyan",
+      "folders": [
+        "/"
+      ],
+      "format": "{size-used} / {size-total}"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[33m󰮯 \u001b[32m󰊠 \u001b[34m󰊠 \u001b[31m󰊠 \u001b[36m󰊠 \u001b[35m󰊠 \u001b[37m󰊠 \u001b[97m󰊠"
+    }
+  ]
+}
