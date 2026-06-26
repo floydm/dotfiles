@@ -2,7 +2,7 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "display": {
     "key": {
-      "width": 10
+      "width": 11
     },
     "size": {
       "binaryPrefix": "jedec"
@@ -15,15 +15,12 @@
   },
   "modules": [
     "break",
+    "break",
+    "break",
     {
       "type": "kernel",
       "key": " Kernel",
       "keyColor": "yellow"
-    },
-    {
-      "type": "packages",
-      "key": "󰏖 Apps",
-      "keyColor": "cyan"
     },
     {
       "type": "uptime",
@@ -31,14 +28,14 @@
       "keyColor": "green"
     },
     {
+      "type": "packages",
+      "key": "󰏖 Apps",
+      "keyColor": "cyan"
+    },
+    "break",
+    {
       "type": "cpu",
       "key": " CPU",
-      "keyColor": "blue",
-      "format": "{name}"
-    },
-    {
-      "type": "gpu",
-      "key": "󰾲 GPU",
       "keyColor": "red",
       "format": "{name}"
     },
@@ -49,14 +46,34 @@
       "format": "{used} / {total}"
     },
     {
+      "type": "gpu",
+      "key": "󰾲 GPU",
+      "keyColor": "blue",
+      "driverSpecific": false,
+      "filter": {
+        "driverName": "amdgpu"
+      }
+    },
+    "break",
+    {
       "type": "disk",
-      "key": " Disk",
-      "keyColor": "cyan",
+      "key": " Root",
+      "keyColor": "green",
       "folders": [
-        "/"
+        "/",
       ],
       "format": "{size-used} / {size-total}"
     },
+    {
+      "type": "disk",
+      "key": " Home",
+      "keyColor": "cyan",
+      "folders": [ 
+        "/home"
+      ],
+      "format": "{size-used} / {size-total}"
+    },
+    "break",
     "break",
     {
       "type": "custom",
