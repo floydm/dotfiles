@@ -17,6 +17,10 @@ setopt HIST_REDUCE_BLANKS
 # ==============================================================================
 autoload -Uz compinit && compinit
 
+# Source the plugins manually
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 # Enable a visual menu when hitting Tab
 zstyle ':completion:*' menu select
 # Case-insensitive matching (type lowercase, it still matches uppercase files)
@@ -40,7 +44,7 @@ bindkey '^[[3~' delete-char
 # 4. ALIASES (Your Terminal Shortcuts)
 # ==============================================================================
 # Colorize standard commands
-alias ls="ls --color=auto"
+alias ls="ls --color=auto --group-directories-first"
 alias grep="grep --color=auto"
 
 # Navigating made lazy
@@ -49,7 +53,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # Shortcuts for safety and speed
-alias ll="ls -lh"       # Detailed, human-readable list of all files
+alias ll="ls -lh --group-directories-first --color=auto"       # Detailed, human-readable list of all files
 alias mkdir="mkdir -p"   # Create nested directories without complaining
 alias zshconfig="nano ~/.zshrc"
 alias reload="source ~/.zshrc"
@@ -79,6 +83,12 @@ alias jctl="journalctl -xe"
 alias flin="flatpak install"
 alias flun="flatpak uninstall"
 alias flup="flatpak update"
+
+# AIO Update
+alias sysup="zref && zup && flup"
+
+# llama.cpp
+alias chatllm='llama-cli -ngl 99 -t 6 --color -i -m'
 
 # ==============================================================================
 # 5. THE PROMPT (The look and feel)

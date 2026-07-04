@@ -20,7 +20,7 @@
     {
       "type": "kernel",
       "key": " Kernel",
-      "keyColor": "yellow"
+      "keyColor": "bright_blue"
     },
     {
       "type": "uptime",
@@ -30,13 +30,13 @@
     {
       "type": "packages",
       "key": "󰏖 Apps",
-      "keyColor": "cyan"
+      "keyColor": "magenta"
     },
     "break",
     {
       "type": "cpu",
       "key": " CPU",
-      "keyColor": "red",
+      "keyColor": "cyan",
       "format": "{name}"
     },
     {
@@ -48,7 +48,7 @@
     {
       "type": "gpu",
       "key": "󰾲 GPU",
-      "keyColor": "blue",
+      "keyColor": "red",
       "driverSpecific": false,
       "filter": {
         "driverName": "amdgpu"
@@ -70,6 +70,15 @@
       "keyColor": "cyan",
       "folders": [ 
         "/home"
+      ],
+      "format": "{size-used} / {size-total}"
+    },
+    {
+      "type": "disk",
+      "key": " Data",
+      "keyColor": "magenta",
+      "folders": [ 
+        "/home/nugget/Games"
       ],
       "format": "{size-used} / {size-total}"
     },
