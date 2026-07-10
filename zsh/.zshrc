@@ -90,6 +90,10 @@ alias sysup="zref && zup && flup"
 # llama.cpp
 alias chatllm='llama-cli -ngl 99 -t 6 --color -i -m'
 
+if [ -f "$HOME/.zshenv.local" ]; then
+    source "$HOME/.zshenv.local"
+fi
+
 # ==============================================================================
 # 5. THE PROMPT (The look and feel)
 # ==============================================================================
