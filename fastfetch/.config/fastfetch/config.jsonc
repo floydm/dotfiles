@@ -11,7 +11,7 @@
   },
   "logo": {
     "type": "builtin",
-    "source": "opensuse"
+    "source": "debian"
   },
   "modules": [
     "break",
